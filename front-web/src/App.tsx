@@ -1,12 +1,8 @@
 import './App.css';
-import Hello from './Hello';
+import Navbar from './Navbar';
 
-function App() {
-  return (
-    <div>
-      <Hello message="Marcio"/>
-    </div>
-  );
-}
+const App: React.FC = () => (
+  <Navbar />
+);
 
 export default App;
