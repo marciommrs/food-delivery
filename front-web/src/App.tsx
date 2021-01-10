@@ -1,12 +1,6 @@
 import './App.css';
-import Home from './Home';
-import Navbar from './Navbar';
+import Routes from './Routes';
 
-const App: React.FC = () => (
-  <>
-    <Navbar />
-    <Home />
-  </>
-);
+const App: React.FC = () => <Routes />;
 
 export default App;
