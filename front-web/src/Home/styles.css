@@ -18,7 +18,11 @@
   line-height: 58px;
   letter-spacing: -0.015em;
   color: var(--dark-color);
-  margin-bottom: 40px !important;
+  /* margin-bottom: 10px !important; */
+}
+
+.home-title p {
+  margin: 5px;
 }
 
 .home-subtitle {
@@ -28,6 +32,10 @@
   letter-spacing: -0.015em;
   color: var(--secondary-color);
   margin-bottom: 30px;
+}
+
+.home-subtitle p {
+  margin: 5px;
 }
 
 .home-btn-order {
@@ -51,7 +59,8 @@
 }
 
 .home-image svg {
-  width: 100% !important;
+  /* width: 100% !important; */
+  width: 500px !important;
 }
 
 @media only screen and (max-width: 768px) {

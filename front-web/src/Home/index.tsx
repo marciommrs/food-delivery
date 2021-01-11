@@ -9,24 +9,17 @@ const Home: React.FC = () => (
       <div className="home-content">
         <div className="home-actions">
           <h1 className="home-title">
-            Faça o seu pedido
-            {' '}
-            <br />
-            {' '}
-            que entregamos
-            {' '}
-            <br />
-            {' '}
-            pra você!!!
+            <p>Faça o seu pedido</p>
+            <p>que entregamos</p>
+            <p>pra você!!!</p>
           </h1>
           <h3 className="home-subtitle">
-            Escolha o seu pedido e em poucos minutos
-            {' '}
-            <br />
-            {' '}
-            levaremoss na sua porta
+            <p>Escolha o seu pedido e em poucos minutos</p>
+            <p>levaremos na sua porta</p>
           </h3>
-          <Link to="/orders" className="home-btn-order">FAZER PEDIDO</Link>
+          <Link to="/orders" className="home-btn-order">
+            FAZER PEDIDO
+          </Link>
         </div>
         <div className="home-image">
           <MainImage />

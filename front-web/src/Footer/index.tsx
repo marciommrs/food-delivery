@@ -6,10 +6,16 @@ import { ReactComponent as Youtube } from './youtube.svg';
 const Footer: React.FC = () => (
   <footer className="main-footer">
     <div className="footer-icons">
-      <a href="https://www.youtube.com/user/marciommrsasdf/featured" target="_new">
+      <a
+        href="https://www.youtube.com/user/marciommrsasdf/featured"
+        target="_new"
+      >
         <Youtube />
       </a>
-      <a href="https://www.linkedin.com/in/marcio-marques-rosa-82072430/" target="_new">
+      <a
+        href="https://www.linkedin.com/in/marcio-marques-rosa-82072430/"
+        target="_new"
+      >
         <Linkedin />
       </a>
       <a href="https://www.instagram.com/marciommrs/" target="_new">

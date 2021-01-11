@@ -1,7 +1,5 @@
 import { useState } from 'react';
-import {
-  MapContainer, TileLayer, Marker, Popup,
-} from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import AsyncSelect from 'react-select/async';
 import { fetchLocalMapBox } from '../api';
 import { OrderLocationData } from './types';
@@ -17,12 +15,12 @@ type Place = {
   position: {
     lat: number;
     lng: number;
-  }
-}
+  };
+};
 
 type Props = {
   onChangeLocation: (location: OrderLocationData) => void;
-}
+};
 
 const OrderLocation: React.FC<Props> = ({ onChangeLocation }: Props) => {
   // ---------------------------------------------------------------------------
@@ -32,7 +30,10 @@ const OrderLocation: React.FC<Props> = ({ onChangeLocation }: Props) => {
     position: initialPosition,
   });
 
-  const loadOptions = async (inputValue: string, callback: (places: Place[]) => void) => {
+  const loadOptions = async (
+    inputValue: string,
+    callback: (places: Place[]) => void,
+  ) => {
     const response = await fetchLocalMapBox(inputValue);
 
     const places = response.data.features.map((item: any) => ({
@@ -68,7 +69,7 @@ const OrderLocation: React.FC<Props> = ({ onChangeLocation }: Props) => {
             placeholder="Digite o endereço para entregar o pedido"
             className="filter"
             loadOptions={loadOptions}
-            onChange={(value) => handleChangeSelect(value as Place)}
+            onChange={value => handleChangeSelect(value as Place)}
           />
         </div>
         <MapContainer

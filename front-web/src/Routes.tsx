@@ -7,8 +7,12 @@ const Routes: React.FC = () => (
   <BrowserRouter>
     <Navbar />
     <Switch>
-      <Route path="/orders"><Orders /></Route>
-      <Route path="/"><Home /></Route>
+      <Route path="/orders">
+        <Orders />
+      </Route>
+      <Route path="/">
+        <Home />
+      </Route>
     </Switch>
   </BrowserRouter>
 );
