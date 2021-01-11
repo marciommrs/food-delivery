@@ -36,6 +36,7 @@ const OrderLocation: React.FC<Props> = ({ onChangeLocation }: Props) => {
   ) => {
     const response = await fetchLocalMapBox(inputValue);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const places = response.data.features.map((item: any) => ({
       label: item.place_name,
       value: item.place_name,
@@ -54,6 +55,7 @@ const OrderLocation: React.FC<Props> = ({ onChangeLocation }: Props) => {
     onChangeLocation({
       latitude: place.position.lat,
       longitude: place.position.lng,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       address: place.label!,
     });
   };

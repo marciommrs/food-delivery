@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import axios from 'axios';
 import { OrderPayLoad } from './Orders/types';
 
-const API_URL = 'http://localhost:8080';
+const API_URL = process.env.REACT_APP_API_URL;
 const mapboxToken = process.env.REACT_APP_ACCESS_TOKEN_MAP_BOX;
 
 export function fetchProducts() {

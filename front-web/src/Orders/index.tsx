@@ -24,6 +24,7 @@ const Orders: React.FC = () => {
     fetchProducts()
       .then(response => setProducts(response.data))
       .catch(error => {
+        // eslint-disable-next-line no-console
         console.error(error);
         toast.warning('Erro ao listar produtos');
       });
@@ -43,6 +44,7 @@ const Orders: React.FC = () => {
   const handleSubmit = () => {
     const productsIds = selectedProducts.map(({ id }) => ({ id }));
     const payload = {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       ...orderLocation!,
       products: productsIds,
     };

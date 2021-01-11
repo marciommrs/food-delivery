@@ -1,6 +1,6 @@
-import { useCallback } from 'react';
 import { Product } from './types';
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function checkIsSelected(selectedProducts: Product[], product: Product) {
   return selectedProducts.some(item => item.id === product.id);
 }
